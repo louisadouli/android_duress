@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.simul.fragment.ChatFragment" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:context=".fragment.ChatFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="40dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_home_simul_title" />
+
+            <ImageView
+                android:id="@+id/iv_startConversation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:src="@drawable/ic_chat_new_persion" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shawdow" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyler_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/pb_chatList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:theme="@style/AppTheme.OrangeAccent"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/lin_chatNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_comment_not_found" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="You have no chats!"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="It's time to connect with people, find someone"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Who inspires you and start a converstation."
+                    android:textColor="@color/orange" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

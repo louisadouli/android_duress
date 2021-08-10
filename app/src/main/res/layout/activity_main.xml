@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.simul.activity.MainActivity" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigationView" />
+
+       <!-- #FFFAF0-->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#FFFAF0"
+            android:foreground="?attr/selectableItemBackground"
+            app:itemIconTint="@drawable/bottom_nav_item_color_selector"
+            app:itemTextColor="@drawable/bottom_nav_item_color_selector"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
+
+    </RelativeLayout>
+
+</layout>

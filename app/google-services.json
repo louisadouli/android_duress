@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "102176972448",
+    "firebase_url": "https://simul-ecae5.firebaseio.com",
+    "project_id": "simul-ecae5",
+    "storage_bucket": "simul-ecae5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102176972448:android:d879dd511405e3ed5d33c5",
+        "android_client_info": {
+          "package_name": "com.simul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102176972448-9e0rgrf2e8p55d088hkrjv4qm00ha3fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simul",
+            "certificate_hash": "72aa0d2869164ba2cd656cbb579c3430fd78a76e"
+          }
+        },
+        {
+          "client_id": "102176972448-j971ddtr67gnslie64d26fj733qqg2a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjTDo4UcCqniXTxnY8jxjPC6R4Sn-9MI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102176972448-j971ddtr67gnslie64d26fj733qqg2a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

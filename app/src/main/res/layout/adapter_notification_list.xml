@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.simul.adapter.NotificationAdapter" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_notificationProfilePic"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_notification_profile"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_notificationProfilePic">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adamlind"
+                android:textSize="14sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"/>
+
+            <androidx.emoji.widget.EmojiTextView
+                android:id="@+id/txt_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Answered your question"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/edt_hint"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10sp"
+            android:src="@drawable/ic_notification_rightside_arrow"/>
+
+    </RelativeLayout>
+</layout>

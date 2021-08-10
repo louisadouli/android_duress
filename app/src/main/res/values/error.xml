@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_empty_username">Please Enter Username</string>
+    <string name="error_empty_email">Please Enter Email Address</string>
+    <string name="error_invalid_email">Please Enter Valid Email Address</string>
+    <string name="error_empty_password">Please Enter Password</string>
+    <string name="error_invalid_password">Your password must be at least 8 character, contain one uppercase letter and one number and one symbol.</string>
+    <string name="error_empty_about_yourself">Please Enter About Yourself</string>
+    <string name="error_invalid_about_yourself">Please Enter About Yourself under 500 Character Long</string>
+    <string name="error_no_internet">Internet Not Available !</string>
+    <string name="error_empty_feedback">Please Enter Feedback Message</string>
+    <string name="error_empty_city">Please Enter City Name</string>
+    <string name="error_empty_simul">Please select simul.</string>
+    <string name="error_display_simul_only_one">You can select only one display simul.</string>
+</resources>

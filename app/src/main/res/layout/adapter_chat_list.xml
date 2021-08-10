@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--<variable
+            name="adapter"
+            type="com.simul.adapter.ChatAdapter" />-->
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+       <!-- <ImageView
+            android:id="@+id/iv_chatUserImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:src="@drawable/ic_comment_profile_one" />-->
+
+        <RelativeLayout
+            android:id="@+id/iv_chatUserImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_userProfilePic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:civ_border_width="2dp"
+                android:src="@drawable/ic_comment_profile_one"
+                android:padding="12dp"/>
+
+            <TextView
+                android:id="@+id/txt_numberOfMessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_userProfilePic"
+                android:layout_alignRight="@id/iv_userProfilePic"
+                android:text="0"
+                android:layout_marginEnd="7dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:background="@drawable/badge_circle"/>
+
+            <!--#00CC00-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_chatUserImage"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Annie"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@drawable/ic_notification_rightside_arrow"
+                    android:drawablePadding="10dp"
+                    tools:text="10:08"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/edt_hint"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <androidx.emoji.widget.EmojiTextView
+                android:id="@+id/txt_lastMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingEnd="20dp"
+                tools:text="Specking of which, Peter really wants you to come in on firday to chat about..."
+                android:textColor="@color/edt_hint"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/edt_hint"
+            android:layout_below="@id/iv_chatUserImage"></View>
+
+    </RelativeLayout>
+</layout>

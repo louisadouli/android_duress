@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connect_bitmoji">Connect your Bitmoji!</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_account">Already have a account?</string>
+    <string name="sign_in_here">Sign in here</string>
+    <string name="create_your_profile">Create your Profile!</string>
+    <string name="sign_up_here">Sign up here</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_in">Sign in</string>
+
+    <string name="username">Username</string>
+    <string name="email_address_for_recovery">Email Address (Only used for account recovery)</string>
+    <string name="password">Password</string>
+    <string name="tell_about_yourself">Tell us a bit about yourself!</string>
+    <string name="are_you_carer">Are you a Carer?</string>
+    <string name="slect_simul_for_avtar">Or Select a Simul for your Avatar</string>
+    <string name="contuine">Continue</string>
+    <string name="send_msg">Send Message</string>
+    <string name="i_agree_terms_condition">I agree with Simul\'s Terms of Conditions</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email_add">Enter email address</string>
+    <string name="enter_msg_for_support_team">Enter message for our support team</string>
+    <string name="enter_email_reset_password">Enter email address to reset your password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="looks_passwor_email_wrong">Looks like the password or email address is wrong</string>
+    <string name="click_reset_password"><u>Click here to reset password</u></string>
+    <string name="click_contact_simul"><u>Click here to contact Simul Support</u></string>
+</resources>

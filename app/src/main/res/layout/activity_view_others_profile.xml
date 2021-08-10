@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.simul.activity.ViewOthersProfileActivity" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg"
+        android:orientation="vertical"
+        tools:context=".activity.ViewOthersProfileActivity">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bg">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="26dp"
+                android:src="@drawable/ic_profile_back_arrow" />
+
+            <TextView
+                android:id="@+id/txt_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="user_name"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iv_shareProfile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/iv_info"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_comment_forword" />
+
+            <ImageView
+                android:id="@+id/iv_info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_comment_info" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+               <!-- android:paddingBottom="100dp"-->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_ProfilePic"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    app:civ_border_width="8dp"
+                    android:src="@drawable/ic_dummy" />
+
+                <TextView
+                    android:id="@+id/txt_totalLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="40,000"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp"
+                    android:visibility="invisible"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/ic_profile_insight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardBackgroundColor="#F2F2F2"
+                        card_view:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/app_bg"
+                            android:orientation="vertical"
+                            android:paddingStart="20dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="20dp"
+                            android:paddingBottom="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Location"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Melbourne, Vic"
+                                android:textColor="@color/edt_hint"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardBackgroundColor="#F2F2F2"
+                        card_view:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/app_bg"
+                            android:orientation="vertical"
+                            android:paddingStart="20dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="20dp"
+                            android:paddingBottom="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="About Me"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_aboutMe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="I have Diabetes, dfgdfgdffg, fdgdfgdfg, gdfgdffsgr, fdgdfghfdhdf, ghfhfghdfg, dfghfhfghfghfg, sdfgfdgdfgdfgdf, gfdgfdgfd"
+                                android:textColor="@color/edt_hint"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardBackgroundColor="#F2F2F2"
+                        card_view:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/app_bg"
+                            android:orientation="vertical"
+                            android:paddingStart="20dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="20dp"
+                            android:paddingBottom="14dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="My Simul's"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.flexbox.FlexboxLayout
+                                android:id="@+id/layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:alignContent="stretch"
+                                app:alignItems="stretch"
+                                app:flexWrap="wrap">
+
+                            </com.google.android.flexbox.FlexboxLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rel_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/floating_bg"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/iv_msgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_mail_outline_white_32dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_msgLogo"
+                android:text="Message"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_viewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:theme="@style/AppTheme.OrangeAccent"/>
+
+    </RelativeLayout>
+</layout>

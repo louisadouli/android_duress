@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.simul.adapter.ChatAdapter" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profileImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="10sp"
+            android:paddingTop="10sp"
+            app:civ_border_width="2dp"
+            android:src="@drawable/ic_avtar_uncheck_one"/>
+
+        <RadioButton
+            android:id="@+id/rb_chatUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_profileImage"
+            android:layoutDirection="rtl"
+            style="@style/MyRadioButtonStyle"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:text="Annie" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/app_bg" />
+
+    </RelativeLayout>
+</layout>

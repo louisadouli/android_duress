@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.simul.adapter.QueAnsAdapter" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_queProfilePic"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:civ_border_width="2dp"
+            android:src="@drawable/ic_profile_qution_profile" />
+
+        <LinearLayout
+            android:id="@+id/lin_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_queProfilePic">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Jane_plain"
+                android:textColor="@color/orange" />
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/txt_name"
+                android:text="50min"
+                android:textSize="10sp"
+                android:textColor="@color/edt_hint" />
+
+        </LinearLayout>
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@+id/txt_fullMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lin_user"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/iv_queProfilePic"
+            android:text="My 12 year old son has just been diagnosed with"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_dislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fullMsg"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_new_one_thumbs_down" />
+
+        <TextView
+            android:id="@+id/txt_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fullMsg"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/txt_dislike"
+            android:drawableStart="@drawable/ic_new_one_thumbs_up"
+            android:drawablePadding="22dp"
+            android:gravity="center"
+            android:text="76.8k"
+            android:textColor="@color/orange"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</layout>

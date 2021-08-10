@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.simul.activity.StartConversationActivity" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.StartConversationActivity">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="26dp"
+                android:src="@drawable/ic_gray_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Start a Conversation!"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_convesationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"></FrameLayout>
+
+
+
+    </RelativeLayout>
+</layout>

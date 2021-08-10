@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.simul.activity.EditProfileSelectSimulActivity" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="processing"
+            type="boolean" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg"
+        android:scrollbars="none"
+        tools:context=".activity.EditProfileSelectSimulActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_simul_title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="Now it's time to select your Simul's."
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="You will have to pick two types of Simul's your display Simul show around your avatar. The second one you can select as many as you like and this will be placed within your profile!"
+                    android:textColor="@color/edt_hint"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/shawdow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="Select your display Simul"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_diabites"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/diabetes_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Diabetes"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!--android:drawableEnd="@drawable/ic_round_fwhite_fill_tick"-->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_cancer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/cancer_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Cancer"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!--<TextView
+                        android:id="@+id/txt_mentalHelth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:drawablePadding="4dp"
+                        android:background="@drawable/mental_helth_bg"
+                        android:gravity="center"
+                        android:drawableEnd="@drawable/ic_round_fwhite_fill_tick"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Mental Health"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_mentalHelth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/mental_helth_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Mental Health"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/txt_genericDiabites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/genetic_discordes_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Genetic Discordes"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <!-- <TextView
+                         android:id="@+id/txt_ageAssociated"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:background="@drawable/age_associated_dieases_bg"
+                         android:gravity="center"
+                         android:drawableEnd="@drawable/ic_round_fwhite_fill_tick"
+                         android:paddingStart="10dp"
+                         android:paddingTop="8dp"
+                         android:paddingEnd="10dp"
+                         android:paddingBottom="8dp"
+                         android:text="Age Associated Dieases"
+                         android:textColor="@color/white"
+                         android:textSize="14sp" />-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_ageAssociated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/age_associated_dieases_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Age Associated Dieases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!--<TextView
+                        android:id="@+id/txt_sT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/sexually_transmitted_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Sexually Transmitted Diseases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />-->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/txt_heartDiases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/heart_diases_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Heart Diases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_mnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/mnd_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="MND"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_asthma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/asthma_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Asthma"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_trauma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/trauma_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Trauma"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_tumurs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/tumors_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Tumors"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_obesity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/obesity_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Obesity"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_sT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/sexually_transmitted_bg"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="Sexually Transmitted Diseases"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/shawdow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="Select other Simul's to add to your profile"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_diabitesOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/diabetes_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Diabetes"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_cancerOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/cancer_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Cancer"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!--<TextView
+                        android:id="@+id/txt_mentalHelth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:drawablePadding="4dp"
+                        android:background="@drawable/mental_helth_bg"
+                        android:gravity="center"
+                        android:drawableEnd="@drawable/ic_round_fwhite_fill_tick"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Mental Health"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_mentalHelthOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/mental_helth_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Mental Health"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/txt_genericDiabitesOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/genetic_discordes_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Genetic Discordes"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <!-- <TextView
+                         android:id="@+id/txt_ageAssociated"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:background="@drawable/age_associated_dieases_bg"
+                         android:gravity="center"
+                         android:drawableEnd="@drawable/ic_round_fwhite_fill_tick"
+                         android:paddingStart="10dp"
+                         android:paddingTop="8dp"
+                         android:paddingEnd="10dp"
+                         android:paddingBottom="8dp"
+                         android:text="Age Associated Dieases"
+                         android:textColor="@color/white"
+                         android:textSize="14sp" />-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_ageAssociatedOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/age_associated_dieases_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Age Associated Dieases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!--<TextView
+                        android:id="@+id/txt_sT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/sexually_transmitted_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Sexually Transmitted Diseases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />-->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/txt_mndOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/mnd_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="MND"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <!--<TextView
+                        android:id="@+id/txt_heartDiasesOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/heart_diases_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Heart Diases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_diabitesTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/diabetes_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Diabetes - Type One"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/txt_heartDiasesOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@drawable/heart_diases_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Heart Diases"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_asthmaOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/asthma_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Asthma"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_traumaOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/trauma_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Trauma"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txt_tumursOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/tumors_bg"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Tumors"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txt_obesityOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/obesity_bg"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Obesity"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_sexuallyTransmittedTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sexually_transmitted_bg"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="Sexually Transmitted Diseases - Herpes"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_sexuallyTransmittedThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sexually_transmitted_bg"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="Sexually Transmitted Diseases - AIDS"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_sexuallyTransmittedFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sexually_transmitted_bg"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="Sexually Transmitted Diseases - HPV"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- <androidx.cardview.widget.CardView
+                 android:id="@+id/card_signUp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="50dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginEnd="50dp"
+                 android:layout_marginBottom="30dp"
+                 app:cardCornerRadius="30dp"
+                 app:cardUseCompatPadding="true"
+                 card_view:cardBackgroundColor="@color/orange"
+                 card_view:cardElevation="2dp">-->
+
+            <RelativeLayout
+                android:id="@+id/lin_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/txt_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="@color/edt_hint"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="@{ processing ? View.GONE : View.VISIBLE }" />/>/>
+
+                <ProgressBar
+                    android:id="@+id/pb_signUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:theme="@style/AppTheme.OrangeAccent"
+                    android:visibility="@{ processing ? View.VISIBLE : View.GONE }"/>
+
+            </RelativeLayout>
+
+            <!-- </androidx.cardview.widget.CardView>-->
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
